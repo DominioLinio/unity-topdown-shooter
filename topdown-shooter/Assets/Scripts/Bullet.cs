@@ -5,6 +5,17 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     public GameObject hitEffect;
+    public float bulletDecayTime = 1f;
+    float time = 0f;
+
+    void Update()
+    {
+        time += Time.deltaTime;
+        if (time > bulletDecayTime)
+        {
+            Destroy(this.gameObject);
+        }
+    }
 
     void OnCollisionEnter2D()
     {

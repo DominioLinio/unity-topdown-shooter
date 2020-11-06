@@ -168,7 +168,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 20
+      scalar: 17.27
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -660,7 +660,7 @@ ParticleSystem:
     serializedVersion: 6
     enabled: 1
     type: 4
-    angle: 5
+    angle: 2.5
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
     radiusThickness: 1
@@ -804,7 +804,7 @@ ParticleSystem:
           m_RotationOrder: 4
     arc:
       value: 360
-      mode: 0
+      mode: 3
       spread: 1
       speed:
         serializedVersion: 2
@@ -2841,11 +2841,11 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     separateAxes: 0
-    frequency: 0.02
+    frequency: 0.04
     damping: 1
     octaves: 3
-    octaveMultiplier: 0.5
-    octaveScale: 2
+    octaveMultiplier: 1
+    octaveScale: 1.5
     quality: 2
     scrollSpeed:
       serializedVersion: 2
@@ -3941,7 +3941,7 @@ ParticleSystem:
     lifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 0.25
       minScalar: 1
       maxCurve:
         serializedVersion: 2
