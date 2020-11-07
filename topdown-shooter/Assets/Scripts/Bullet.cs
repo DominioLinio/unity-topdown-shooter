@@ -5,6 +5,7 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     public GameObject hitEffect;
+    public GameObject hitEffect2;
     public float bulletDecayTime = 1f;
     float time = 0f;
 
@@ -30,6 +31,11 @@ public class Bullet : MonoBehaviour
             Destroy(this.gameObject);
             GameObject explosion = Instantiate(hitEffect, this.GetComponent<Transform>().position, this.GetComponent<Transform>().rotation);
             explosion.GetComponent<Transform>().transform.Rotate(170f, 0f, 0f);
+        }
+        else if (collision.gameObject.tag == "Enemy")
+        {
+            Destroy(this.gameObject);
+            GameObject explosion = Instantiate(hitEffect2, this.GetComponent<Transform>().position, this.GetComponent<Transform>().rotation);
         }
     }
 }

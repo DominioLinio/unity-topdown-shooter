@@ -146,6 +146,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitEffect: {fileID: 6886675692826514654, guid: 885b250e4713f8f4fb7123ae903ba8fe,
     type: 3}
+  hitEffect2: {fileID: 1391027573581893150, guid: f21e6f028c5c3f1479f7e9359f698b4a,
+    type: 3}
   bulletDecayTime: 1
 --- !u!58 &-1825418845463489270
 CircleCollider2D:
