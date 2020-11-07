@@ -8,6 +8,12 @@ public class Bullet : MonoBehaviour
     public float bulletDecayTime = 1f;
     float time = 0f;
 
+
+    void Start()
+    {
+        Physics2D.IgnoreLayerCollision(8,9,true);
+    }
+
     void Update()
     {
         time += Time.deltaTime;
@@ -17,10 +23,13 @@ public class Bullet : MonoBehaviour
         }
     }
 
-    void OnCollisionEnter2D()
+    void OnCollisionEnter2D(Collision2D collision)
     {
-        Destroy(this.gameObject);
-        GameObject explosion = Instantiate(hitEffect, this.GetComponent<Transform>().position, this.GetComponent<Transform>().rotation);
-        explosion.GetComponent<Transform>().transform.Rotate(170f, 0f, 0f);
+        if (collision.gameObject.tag == "Terrain")
+        {
+            Destroy(this.gameObject);
+            GameObject explosion = Instantiate(hitEffect, this.GetComponent<Transform>().position, this.GetComponent<Transform>().rotation);
+            explosion.GetComponent<Transform>().transform.Rotate(170f, 0f, 0f);
+        }
     }
 }
