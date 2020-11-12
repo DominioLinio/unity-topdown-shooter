@@ -35,7 +35,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (sprinting)
         {
-            moveSpeed = baseMoveSpeed + 2f;
+            moveSpeed = baseMoveSpeed + 1f;
         }
         else
         {
